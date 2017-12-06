@@ -18,5 +18,5 @@ exports.eliminar = function(req, res, id){
 
 }
 exports.token = function(req, res){ 
-
+	res.status(404).send('Something broke!');
 }
