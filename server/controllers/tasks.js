@@ -1,9 +1,9 @@
-var basicAuth = require('basic-auth');
-var cookieParser = require('cookie-parser');
-var bodyParser = require('body-parser');
-var modelos = require ('../models/modelos').modelos;
-var express = require('express');
-var app = express();
+const basicAuth = require('basic-auth');
+const cookieParser = require('cookie-parser');
+const bodyParser = require('body-parser');
+const express = require('express');
+const modelos = require ('../models/models').modelos;
+const app = express();
 app.use(bodyParser.urlencoded({ extended: true }));
 
 exports.guardar = function(req, res, datos){ 
@@ -12,7 +12,8 @@ exports.guardar = function(req, res, datos){
 
 }
 exports.regresar = function(req, res){ 
-
+	response.setHeader('Content-Type', 'application/json');
+    response.send(modelos);
 }
 exports.eliminar = function(req, res, id){ 
 
