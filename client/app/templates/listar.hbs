@@ -1,0 +1,30 @@
+{{outlet}}
+
+<div class='container'>
+	<h3>Facturas</h3>
+	<button{{action 'nuevaFactura'}}>Nueva Factura</button>
+	<br>
+	<br>
+<div class='container'>
+<table class="table">
+	<thead>
+<tr>
+    <th>Serie</th>
+    <th>Folio</th>
+    <th>Fecha</th>
+    <th>Total</th>
+</tr>
+</thead>
+<tbody>
+{{#each facturas as |item|}}
+<tr>
+<th>{{item.serie}}</th>
+<th>{{item.folio}}</th>
+<th>{{item.fecha}}</th>
+<th>{{item.formaPago}}</th>
+</tr>
+{{/each}}
+</tbody>
+</table>
+</div>
+</div>

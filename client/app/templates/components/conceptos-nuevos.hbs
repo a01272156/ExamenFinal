@@ -1,0 +1,11 @@
+{{yield}}
+<div class='container'>
+<form{{action 'save' concepto this.cantidad this.descripcion this.precio this.descuento}}>
+Cantidad:{{input value=this.cantidad}}
+Descripcion:{{input value=this.descripcion}}
+Precio:{{input value=this.precio}}
+Importe:{{importe}}
+Descuento:{{input value=this.descuento}}
+<button>Guardar Concepto</button>
+</form>
+</div>

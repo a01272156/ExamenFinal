@@ -1,0 +1,6 @@
+{
+  "name": "client",
+  "dependencies": {
+    "sweetalert2": "^6.1.0"
+  }
+}

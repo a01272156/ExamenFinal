@@ -1,0 +1,22 @@
+{{outlet}}
+<div class='container'>
+<h2>Facturas</h2>
+<form{{action 'save' model on='submit'}}>
+Serie{{input value=model.serie}}
+Folio{{input value=model.folio}}
+<br>
+<br>
+Fecha{{input type='date' value=model.fecha}}
+<br>
+{{#each numConceptos as |item|}}
+<br>
+	{{conceptos-nuevos concepto=item }}
+{{/each}}
+<br>
+<br>
+<button{{action 'nuevoConcepto'}}>Nuevo Concepto</button>
+<h5>Subtotal:{{subtotal}}</h5>
+<h5>Total:{{total}}</h5>
+<button>Guardar</button>
+</form>
+</div>
