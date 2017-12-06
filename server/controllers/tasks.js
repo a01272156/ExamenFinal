@@ -6,7 +6,7 @@ var express = require('express');
 var app = express();
 app.use(bodyParser.urlencoded({ extended: true }));
 
-exports.guardar = function(req, res){ 
+exports.guardar = function(req, res, datos){ 
 
 	res.status(400).send('Something broke!');
 
